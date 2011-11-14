@@ -1,0 +1,21 @@
+[(#REM)Page d'accueil du plugin]
+
+<h1><:squirrelchimp:titre_plugin:></h1>
+
+[(#REM)On y affiche toute noisette "prive/squelettes/contenu/NOM_OBJET_DECLARE_accueil.html" des objets déclarés (voir "inc/squirrel_chimp_definitions.php" pour la déclaration des objets)]
+
+#SET{chemin,prive/squelettes/contenu/}
+#SET{objets,(#VAL{objets}|objets_config)}
+
+[(#REM) Intégration des plugins]
+
+<BOUCLE_objets(POUR){tableau #GET{objets}}>
+	[(#CHEMIN{[(#GET{chemin})][(#CLE)]_acceuil.html}|oui)
+		[(#INCLURE{fond=[(#GET{chemin})][(#CLE)]_acceuil}{env}{ajax})]
+	]
+</BOUCLE_objets>
+
+
+
+
+
