@@ -21,6 +21,11 @@
 		<titre>Squirrels Love Chimps</titre>   
 		<url>squirrel_chimp</url>   
     </bouton>
+    <bouton id="squirrel_chimp21" parent="bando_edition">
+    <titre>MailChimp</titre>
+    <icone>images/logo_slc_16.png</icone>
+    <url>squirrel_chimp</url>
+    </bouton>
  	<pipeline>
 		<nom>header_prive</nom>		
 		<inclure>squirrel_chimp_pipelines.php</inclure>
