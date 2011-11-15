@@ -59,7 +59,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'modeles_form_abonnement' => 'Formulaire Abonnement',
 	
 	//N
-	'nom' => 'Nom et pPrénom',
+	'nom' => 'Nom et Prénom',
 	'nom_liste' => 'Nom',
 	
 	//P

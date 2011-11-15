@@ -22,7 +22,6 @@ function squirrel_chimp_affiche_droite($flux){
 	// Des plugins peuvent y inclure d'autres pages
 	$pipeline =pipeline('squirrel_chimp_pages_raccourcis_models',array());
 
-	
 	if(in_array($exec,$affichage_page) OR in_array($exec,$pipeline)){
 		
 		//On y in afficher toute noisette "prive/squelettes/extra/NOM_OBJET_DECLARE_modeles.html"

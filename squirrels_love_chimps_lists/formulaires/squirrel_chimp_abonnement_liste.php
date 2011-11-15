@@ -21,20 +21,22 @@ include_spip('inc/config');
 	$filters=$listes?$listes:lire_config('squirrel_chimp/mailinglists');
 	$filters=array_filtre_lists($filters);
 	
+	// Eviter des erreurs sur le formulaire si le plugin n'est pas configuré
+	if(is_array($donnees_personnelles)){
+		$valeurs = array(
+			'email'=>'',
+			'email2'=>'',
+			'mailinglists'=>'',
+			'donnees_personnelles'=>$donnees_personnelles,
+			'filters'=>$filters,
+			);
+		
+		
 	
-	$valeurs = array(
-		'email'=>'',
-		'email2'=>'',
-		'mailinglists'=>'',
-		'donnees_personnelles'=>$donnees_personnelles,
-		'filters'=>$filters,
-		);
-	
-	
-	
-	foreach($donnees_personnelles AS $value){
-		$valeurs[$value]='';
-		}		
+			foreach($donnees_personnelles AS $value){
+				$valeurs[$value]='';
+				}	
+		}	
 	
 	return $valeurs;
 }

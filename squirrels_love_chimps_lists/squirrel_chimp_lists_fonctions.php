@@ -42,7 +42,7 @@ function recuperer_listes($apiKey,$filters='',$start='',$limit='100'){
 function array_filtre_lists($mailinglists){
 
 	if(is_array($mailinglists)){
-		$lists=implode(array_keys($mailinglists),',');
+		if(count($mailinglists)>0)$lists=implode(array_keys($mailinglists),',');
 	}
 	else $lists=$mailinglists;
 	return array('list_id'=>$lists);
