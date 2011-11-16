@@ -11,8 +11,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'config_squirrel_chimp' => 'Général',
 	'configurer_erreur_api' => 'Erreur, vos données n\'ont pas été sauvegardées',
 	'configurer_legend' => 'Paramétrage des identifiants MailChimp',
-	'configurer_listid' => 'Identifiant unique de la liste',
-	'configurer_listid_explication' => 'Chaque liste de personnes possède un identifiant unique. Visualisez la liste qui vous intéresse sur cette page : <a href ="https://admin.mailchimp.com/lists/">Mailchimp list</a>. Cliquez sur "Settings/list Settings and unique id" puis en bas de la page vous trouverez l\'identifiant: "unique id for list"',
 	'configurer_apikey' => 'Identifiant unique du compte MailChimp',
 	'configurer_apikey_explication' => 'API Key que l\'on trouve dans l\'administration : <a href="http://admin.mailchimp.com/account/api">MailChimp API</a>',
 

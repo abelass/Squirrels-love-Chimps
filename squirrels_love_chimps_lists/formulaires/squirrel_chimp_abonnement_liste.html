@@ -14,7 +14,7 @@
 		#ACTION_FORMULAIRE{#ENV{action}}
 		
 	<BOUCLE_editer(CONDITION){si #ENV*{message_ok}|non}>
-		<fieldset>
+		<fieldset class="donnees_perso">
 			<legend><:scl:donnees_personnelles:></legend>		
 			<ul>
 				
@@ -51,7 +51,7 @@
 			</ul>
 
 		</fieldset>	
-		<fieldset>
+		<fieldset class="donnees_perso">
 			<legend><:scl:mailinglists:></legend>
 			<label for="ml_act_ajout"><:scl:choix_mailinglists_abonnement:></label>
 				[
