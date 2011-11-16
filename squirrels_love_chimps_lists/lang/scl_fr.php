@@ -5,9 +5,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	//A
 	'abonnement_mailinglists' => 'Abonnement aux mailing listes',
-	'actualiser_mailinglists_ajout' => 'Quand un auteur est-il ajouté ?',
-	'actualiser_mailinglists_actualise' => 'Quand le profil d\'un auteur est-il actualisé (synchroniser la mailing list) ?',
-	'actualiser_mailinglists_enlever' => 'Quand un auteur est-il enlevé - mis à la poubelle (enlever de la mailing list) ?',
+	'actualiser_mailinglists_ajout' => 'Quand un auteur est ajouté',
+	'actualiser_mailinglists_actualise' => 'Quand le profil d\'un auteur est actualisé (synchroniser la mailing list)',
+	'actualiser_mailinglists_enlever' => 'Quand un auteur est enlevé - mis à la poubelle (enlever de la mailing list)',
 
 	//B
 	'bypass_ml_opt_in' => 'Outrepasser le double opt-in de MailChimp. Les auteurs nouvellement enregistrés ne reçoivent pas de mail de confirmation de MailChimp (MailChimp <a target="_blank" href="http://www.mailchimp.com/kb/article/how-does-confirmed-optin-or-double-optin-work">recommande de ne pas en abuser</a>, donc prudence!)',

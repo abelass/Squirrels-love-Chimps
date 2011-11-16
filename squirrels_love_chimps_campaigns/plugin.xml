@@ -1,8 +1,8 @@
 <plugin>
 	<nom>Squirrels Love Chimps Campaigns</nom>
-	<auteur>[Spade->http://blog.spade.be/] et [Rainer Müller->http://www.mychacra.net]</auteur>
-	<licence>GNU/GLP</licence>
-	<version>1.1.1</version>
+	<auteur>[Spade->http://www.spade.be/labs/squirrels-love-chimps] et [Rainer Müller->http://www.mychacra.net]</auteur>
+	<licence>MIT</licence>
+	<version>1.1.2</version>
 	<etat>test</etat>
 	<slogan>Gestion des campagnes de Mailchimp</slogan>
 	<description>>Gestion des campagnes de [Mailchimp->http://mailchimp.com/] Inspiré  des fonctionnalités du plugin Wordpress [Autochimp-http://wordpress.org/extend/plugins/autochimp/] </description>

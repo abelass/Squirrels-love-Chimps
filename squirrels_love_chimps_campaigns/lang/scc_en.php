@@ -4,45 +4,45 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	//A
-	'activer' => 'Activer',
-	'article_campagne' => 'Création automatique lors de la publication d\'un article',
-	'article_entier' => 'Voir tout l\'article',
+	'activer' => 'Enable',
+	'article_campagne' => 'Automatic creation when an article is published',
+	'article_entier' => 'See the entire article',
 	
 	
 	//C
-	'campagnes_articles' => 'Création de campagnes à partir d\'un article',
-	'campagne_creation_unique' => 'Créer une campagne qu\'une seule fois',
-	'campagnes_mailchimp' => 'Les campagnes MailChimp gérées par SPIP',
-	'choisir_liste' => 'Vous devez d\'abord <a href="@url@">choisir une liste</a>',
+	'campagnes_articles' => 'Campaigns creation from an article',
+	'campagne_creation_unique' => 'Create a campaign just once',
+	'campagnes_mailchimp' => 'MailChimp campaigns managed by SPIP',
+	'choisir_liste' => 'You first have to <a href="@url@">choose a list</a>',
 	'config_squirrel_chimp_campaigns' => 'Campagnes',
 
 	//G
-	'gestion_campagnes' => 'Gestion de campagnes',
+	'gestion_campagnes' => 'Campaigns management',
 	
 	//E
-	'emails_envoyes' => 'Emails envoyés',
-	'envoyer_campagne_directe' => 'Envoyer la campagne dés que l\'article est publié',
-	'"Unable to Pull list of Campaign!"' => 'La liste des campagne n\'a pas pu être obtenue',
-	'explication_article_campagne' => 'Une campagne va être créée pour chacune de listes choisies',
-	'explication_envoyer_campagne_directe' => 'Si désactivé, la campagne sera enregistré comme brouillon',
-	'explication_campagne_creation_unique' => 'Si désactivé, une nouvelle campagne sera créée à chaque fois que l\'article est actualisé',
-	'explication_rubrique_campagne' => 'Les articles des rubriques suivantes seront utilisés pour la création automatique des campagnes (si vous ne choisissez rien, les articles de toutes les rubriques seront pris en compte)',
+	'emails_envoyes' => 'Sent emails',
+	'envoyer_campagne_directe' => 'Send the campaign as soon as the article is published',
+	'"Unable to Pull list of Campaign!"' => 'The list of campaigns has not been found',
+	'explication_article_campagne' => 'A campaign will be created for each chosen list',
+	'explication_envoyer_campagne_directe' => 'If desable, the camapign will be saved as draft',
+	'explication_campagne_creation_unique' => 'If desable, a new campaign will be created each time the article is updated',
+	'explication_rubrique_campagne' => 'Articles in the following sections will be used to automatically create campaigns (if you don\'t choose anything article in all sections will be used)',
 	
 	
 	//I
 	'id_campagne' => 'id_campagne',	
 
 	//M
-	'modele_liste_campagnes' => 'Afficher une liste des campagnes',	
+	'modele_liste_campagnes' => 'Show a list of campaigns',	
 
 	//N
-	'nom_campagne' => 'Nom',	
+	'nom_campagne' => 'Name',	
 	
 	//R
-	'rubrique_campagne'=>'Rubriques pour la création de campagnes',
+	'rubrique_campagne'=>'Sections for campaigns creation',
 	
 	//S
-	'statut_campagne'=>'Statut',
+	'statut_campagne'=>'Status',
 
 );
 
