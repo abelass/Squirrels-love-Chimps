@@ -4,82 +4,82 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	//A
-	'abonnement_mailinglists' => 'Abonnement aux mailing listes',
-	'actualiser_mailinglists_ajout' => 'Quand un auteur est-il ajouté ?',
-	'actualiser_mailinglists_actualise' => 'Quand le profil d\'un auteur est-il actualisé (synchroniser la mailing list) ?',
-	'actualiser_mailinglists_enlever' => 'Quand un auteur est-il enlevé - mis à la poubelle (enlever de la mailing list) ?',
+	'abonnement_mailinglists' => 'Mailing lists subscription',
+	'actualiser_mailinglists_ajout' => 'When an author is added',
+	'actualiser_mailinglists_actualise' => 'When an author profile is updated (synchronize the mailing list)',
+	'actualiser_mailinglists_enlever' => 'When an author is deleted (deleted too in the mailing list)',
 
 	//B
-	'bypass_ml_opt_in' => 'Outrepasser le double opt-in de MailChimp. Les auteurs nouvellement enregistrés ne reçoivent pas de mail de confirmation de MailChimp (MailChimp <a target="_blank" href="http://www.mailchimp.com/kb/article/how-does-confirmed-optin-or-double-optin-work">recommande de ne pas en abuser</a>, donc prudence!)',
+	'bypass_ml_opt_in' => 'Bypass MailChimp opt-in. New authors don\'t recieve confirmation email from MailChimp (MailChimp <a target="_blank" href="http://www.mailchimp.com/kb/article/how-does-confirmed-optin-or-double-optin-work">recommand to not to abuse of this</a>, be carefull!)',
 
 	
 	//C
-	'champ_spip' => 'Champ SPIP',
-	'champs_supp' => 'Quels informations additionnelles de SPIP voulez-vous utiliser pour la synchronisation avec MailChimp (l\'email est toujours synchronisé)',
-	'champs_supp_mapping' => 'Utilisez le tableau suivant pour accorder les champs SPIP aux champs MailChimp',
-	'choix_mailinglists_abonnement' => 'Choisissez la/les listes',
-	'choix_mailinglists' => 'Quelle mailing listes voulez-vous actualiser automatiquement ',
-	'config_squirrel_chimp_lists' => 'Listes',
+	'champ_spip' => 'SPIP field',
+	'champs_supp' => 'Which extra informations do you want to use for the MailChimp sync (Email is always synchronized)',
+	'champs_supp_mapping' => 'Use the following table to synch SPIP fileds with MailChimp fields',
+	'choix_mailinglists_abonnement' => 'Choose list(s)',
+	'choix_mailinglists' => 'Which mailing lists do you want to automatically update ?',
+	'config_squirrel_chimp_lists' => 'Lists',
 
 	//D
-	'donnees_personnelles' => 'Vos données personnelles',
-	'demande_inscription_envoyee_ok' => 'Votre abonnement a été enregistré.',	
-	'demande_inscription_envoyee1' => 'Un mail vous a été envoyé à l\'adresse "@email@".',
-	'demande_inscription_envoyee2' => 'Pour valider votre abonnement, vous devez cliquer sur le lien dans l\'email que vous avez reçu.',
-	'demande_inscription_envoyee3' => 'Vérifiez éventuellement dans votre dossier SPAM ou dans votre corbeille si jamais vous ne trouvez pas cet email.',
-	'demande_desincription_ok' => 'Votre adresse "@email@" a également été retirée de Mailchimp. Au revoir.',
+	'donnees_personnelles' => 'Your personal data',
+	'demande_inscription_envoyee_ok' => 'Your subscription has been saved.',	
+	'demande_inscription_envoyee1' => 'A message has been sent to your address "@email@".',
+	'demande_inscription_envoyee2' => 'Click on the link into the message you recieved to validate your subscription.',
+	'demande_inscription_envoyee3' => 'Eventually check your SPAM folder or your trashbin if you don\'t get thie email.',
+	'demande_desincription_ok' => 'your address "@email@" has been deleted from Mailchimp. Bye.',
 
 	//E
 	'email' => 'Email',
-	'email_confirmer' => 'Confirmez votre adresse email',
-	'email2_identique' => 'Ce mail doit être identique',
-	'enregistrement_ok' => 'Les changements ont été enregistrés',
-	'exemple' => 'Exemple',
+	'email_confirmer' => 'Confirm your email address',
+	'email2_identique' => 'This email must be the same',
+	'enregistrement_ok' => 'Changes have been saved',
+	'exemple' => 'Example',
 
 	//G
-	'gestion_listes' => 'Gestion des listes',
+	'gestion_listes' => 'Lists management',
 	
 	//I
-	'id_liste' => 'id liste',
+	'id_liste' => 'list ID',
 	'id_separe_virgules' => 'ID1,ID2,..',
-	'inscrits_list' => 'Nombre d\'inscrits',
+	'inscrits_list' => 'Subscribers',
 	
 	//Q
-	'quand_actualiser_mailinglists' => 'Quand voulez-vous actualiser les listes choisies ?',
+	'quand_actualiser_mailinglists' => 'When do you want to update the chosen lists ?',
 	
 	
 	//L
-	'listes_mailchimp' => 'Les listes MailChimp gérées par SPIP',
+	'listes_mailchimp' => 'MailChimp lists managed by SPIP',
 
 	//M
-	'mailinglists' => 'Les mailing listes',
-	'mailinglists_dispos' => 'Les mailing listes disponibles :',
-	'modele' => 'Le modèle :',
-	'modeles' => 'Les modèles :',
-	'modeles_form_abonnement' => 'Formulaire Abonnement',
+	'mailinglists' => 'Mailing lists',
+	'mailinglists_dispos' => 'Available mailing lists :',
+	'modele' => 'The template :',
+	'modeles' => 'Templates :',
+	'modeles_form_abonnement' => 'Subscription form',
 	
 	//N
-	'nom' => 'Nom et pPrénom',
-	'nom_liste' => 'Nom',
+	'nom' => 'Last and First Name',
+	'nom_liste' => 'Name',
 	
 	//P
-	'pas_accorder' => 'Pas accorder',
+	'pas_accorder' => 'Not synch',
 	
 	//S
-	'sync_auteurs' => 'Synchroniser les auteurs vers MailChimp',
-	'sync_actualise' => 'actualisé :',
-	'sync_ajoute' => 'ajouté :',
-	'sync_echec' => 'échec',
-	'sync_echec_batch' => 'Échec de la souscription en masse',
-	'sync_erreurs' => 'Erreurs :',
+	'sync_auteurs' => 'Synchronize authors to MailChimp',
+	'sync_actualise' => 'updated :',
+	'sync_ajoute' => 'added :',
+	'sync_echec' => 'failed',
+	'sync_echec_batch' => 'The mass subscription has failed',
+	'sync_erreurs' => 'Errors :',
 	'sync_message' => 'Message :',	
-	'sync_ok' => 'Synchronisation réussie :',
+	'sync_ok' => 'Successfully synchronized :',
 	
 	// T
-	'tout' => 'Toutes les listes',
+	'tout' => 'All lists',
 
 	//U
-	'une_liste' => 'Une seule liste',
+	'une_liste' => 'Just a list',
 );
 
 ?>

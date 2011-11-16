@@ -1,12 +1,12 @@
 <plugin>
 	<nom>Squirrels Love Chimps</nom>
-	<auteur>[Spade->http://blog.spade.be/] et [Rainer Müller->http://www.mychacra.net]</auteur>
-	<licence>GNU/GLP</licence>
-	<version>1.1.1</version>
+	<auteur>[Spade->http://www.spade.be/labs/squirrels-love-chimps] et [Rainer Müller->http://www.mychacra.net]</auteur>
+	<licence>MIT</licence>
+	<version>1.1.2</version>
 	<etat>test</etat>
 	<slogan>Connecter SPIP avec Mailchimp</slogan>
 	<description>
-		Ce plugin constitue le coeur d'un set de plugins qui on pour but de d'intégerer connecter SPIP  avec [MailChimp->http://mailchimp.com/]
+		Ce plugin constitue le coeur d'un set de plugins qui on pour but de connecter SPIP  avec [MailChimp->http://mailchimp.com/]
 	
 		Il met à disposition l'api de Mailchimp ainsi qu'un framework permettant d'ajouter facilement d'autre plugins
 		
