@@ -4,6 +4,8 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	//A
+
+	'abonnement_mailinglist' => 'Mailing list subscription',
 	'abonnement_mailinglists' => 'Mailing lists subscription',
 	'actualiser_mailinglists_ajout' => 'When an author is added',
 	'actualiser_mailinglists_actualise' => 'When an author profile is updated (synchronize the mailing list)',

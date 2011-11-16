@@ -9,7 +9,7 @@
 	)]
 
 <div class="formulaire_spip formulaire_#FORM">
-	<h2><:scl:abonnement_mailinglists:></h2>
+	<h2>[(#GET{liste_donnes}|count|>{1}|?{<:scl:abonnement_mailinglists:>,<:scl:abonnement_mailinglist:>})]</h2>
 	<form method="post" action="#ENV{action}"><div>
 		#ACTION_FORMULAIRE{#ENV{action}}
 		
@@ -51,22 +51,30 @@
 			</ul>
 
 		</fieldset>	
-		<fieldset class="donnees_perso">
-			<legend><:scl:mailinglists:></legend>
-			<label for="ml_act_ajout"><:scl:choix_mailinglists_abonnement:></label>
-				[
-					<span class='erreur'>(#ENV**{erreurs}|table_valeur{mailinglists})</span>
-					]			
-			<ul>
-			<BOUCLE_listes(POUR){tableau #GET{liste_donnes}}>	
-			<li><div class="choix">
-					<input type="checkbox" class="checkbox" name="mailinglists[]" id="mailinglists_[(#VALEUR|table_valeur{id})]" value="[(#VALEUR|table_valeur{id})]"[ (#VALEUR|table_valeur{id}|in_array{#ENV{mailinglists,#ARRAY{}}})oui) checked="checked"]/>
-					<label for="ml_act_ajout">[(#VALEUR|table_valeur{name})]</label>
-				</div>
-			</li>
-			</BOUCLE_listes>
-			</ul>
-		</fieldset>		
+		<BOUCLE_teste(CONDITION){si #GET{liste_donnes}|count|>{1}}>
+			<fieldset class="donnees_perso">
+				<legend><:scl:mailinglists:></legend>
+	
+	
+				<label for="ml_act_ajout"><:scl:choix_mailinglists_abonnement:></label>
+					[
+						<span class='erreur'>(#ENV**{erreurs}|table_valeur{mailinglists})</span>
+						]
+				<ul>				
+	
+				<BOUCLE_listes(POUR){tableau #GET{liste_donnes}}>	
+				<li><div class="choix">
+						<input type="checkbox" class="checkbox" name="mailinglists[]" id="mailinglists_[(#VALEUR|table_valeur{id})]" value="[(#VALEUR|table_valeur{id})]"[ (#VALEUR|table_valeur{id}|in_array{#ENV{mailinglists,#ARRAY{}}})oui) checked="checked"]/>
+						<label for="ml_act_ajout">[(#VALEUR|table_valeur{name})]</label>
+					</div>
+				</li>
+				</BOUCLE_listes>
+	
+					</ul>
+			</fieldset>	
+		</BOUCLE_teste>
+			<input type="hidden" name="mailinglists[]" value="[(#GET{liste_donnes}|table_valeur{0}|table_valeur{id})]"/>
+			<//B_teste>	
 		<p class="boutons">
 			<input type="submit" name="enregistrer" class="submit" value="<:bouton_valider:>" />
 		</p>
