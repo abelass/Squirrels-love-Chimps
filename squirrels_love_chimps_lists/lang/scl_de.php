@@ -18,6 +18,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'champ_spip' => 'SPIP Feld',
 	'champs_supp' => 'Welche zusätzlichen SPIP Informationen wollen sie bei der Synchronisierung mit MailChimp verwenden? (die Emailadresse wird immer synchronisiert)',
 	'champs_supp_mapping' => 'Verwenden Sie die folgende Tafel, um die Spip Felder mit den entsprechenden MailChimp Feldern abzustimmen',
+	'choisir_liste' => 'Sie müssen zuerst<a href="@url@">mindest eine Liste auswählen</a>',
 	'choix_mailinglists_abonnement' => 'Wählen Sie die Liste(n) aus',
 	'choix_mailinglists' => 'Welche Mailinglisten wollen Sie automatisch aktualisieren',
 	'config_squirrel_chimp_lists' => 'Listen',

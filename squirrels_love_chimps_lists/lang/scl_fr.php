@@ -18,6 +18,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'champ_spip' => 'Champ SPIP',
 	'champs_supp' => 'Quels informations additionnelles de SPIP voulez-vous utiliser pour la synchronisation avec MailChimp (l\'email est toujours synchronisé)',
 	'champs_supp_mapping' => 'Utilisez le tableau suivant pour accorder les champs SPIP aux champs MailChimp',
+	'choisir_liste' => 'Vous devez d\'abord <a href="@url@">choisir au moins une liste</a>',
 	'choix_mailinglists_abonnement' => 'Choisissez la/les listes',
 	'choix_mailinglists' => 'Quelle mailing listes voulez-vous actualiser automatiquement ',
 	'config_squirrel_chimp_lists' => 'Listes',

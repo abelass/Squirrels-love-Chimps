@@ -1,85 +1,93 @@
 [(#REM)Récuperation des données]
 #SET{listes,#CONFIG{squirrel_chimp/apiKey}|recuperer_listes{#ENV{filters}}}
 
-[(#GET{listes}|table_valeur{error}|?{
-	[<p class="reponse_formulaire_erreur">(#GET{listes}|table_valeur{error})</p>]
-	,
-	#SET{liste_donnes,#GET{listes}|table_valeur{data}}
-	}
-	)]
+[(#GET{listes}|is_array|et{#ENV{filters}|table_valeur{list_id}}|oui)
+	[(#GET{listes}|table_valeur{error}|?{
+		[<p class="reponse_formulaire_erreur">(#GET{listes}|table_valeur{error})</p>]
+		,
+		#SET{liste_donnes,#GET{listes}|table_valeur{data}}
+		}
+		)]
+	]
 
 <div class="formulaire_spip formulaire_#FORM">
+	<BOUCLE_valide(CONDITION){si #GET{liste_donnes}}>	
 	<h2>[(#GET{liste_donnes}|count|>{1}|?{<:scl:abonnement_mailinglists:>,<:scl:abonnement_mailinglist:>})]</h2>
 	<form method="post" action="#ENV{action}"><div>
 		#ACTION_FORMULAIRE{#ENV{action}}
-		
-	<BOUCLE_editer(CONDITION){si #ENV*{message_ok}|non}>
-		<fieldset class="donnees_perso">
-			<legend><:scl:donnees_personnelles:></legend>		
-			<ul>
-				
-				[(#REM)récupère les champs accordées avec mailchimp]
-				<BOUCLE_donnees_perso(POUR){tableau #ENV{donnees_personnelles}}>
-					
-				[<li class="zditer_#VALEUR[ (#ENV**{erreurs}|table_valeur{#VALEUR}|oui)erreur]">
-					<label for="#VALEUR">#EVAL{_T('scl:#CLE');}</label>
-					[
-					<span class='erreur'>(#ENV**{erreurs}|table_valeur{#VALEUR})</span>
-					]
-					<input type="text" class="#VALEUR" name="(#VALEUR)" id="#VALEUR" value="#ENV{#VALEUR}"/>
-				</li>]					
-				
-				</BOUCLE_donnees_perso>	
-				
-				<li class="editer_email[ (#ENV**{erreurs}|table_valeur{email}|oui)erreur]">
-					<label for="email"><:scl:email:></label>				
-					[
-					<span class='erreur'>(#ENV**{erreurs}|table_valeur{email})</span>
-					]
-					<input type="text" class="email" name="email" id="email" value="#ENV{email}"/>
-
-				</li>				
-				<li class="editer_email2[ (#ENV**{erreurs}|table_valeur{email2}|oui)erreur]">
-					<label for="email2"><:scl:email_confirmer:></label>				
-					[
-					<span class='erreur'>(#ENV**{erreurs}|table_valeur{email2})</span>
-					]
-					<input type="text" class="email2" name="email2" id="email2" value="#ENV{email2}"/>
-
-				</li>				
-				
-			</ul>
-
-		</fieldset>	
-		<BOUCLE_teste(CONDITION){si #GET{liste_donnes}|count|>{1}}>
+		<BOUCLE_editer(CONDITION){si #ENV*{message_ok}|non}>
 			<fieldset class="donnees_perso">
-				<legend><:scl:mailinglists:></legend>
-	
-	
-				<label for="ml_act_ajout"><:scl:choix_mailinglists_abonnement:></label>
-					[
-						<span class='erreur'>(#ENV**{erreurs}|table_valeur{mailinglists})</span>
+				<legend><:scl:donnees_personnelles:></legend>		
+				<ul>
+					
+					[(#REM)récupère les champs accordées avec mailchimp]
+					<BOUCLE_donnees_perso(POUR){tableau #ENV{donnees_personnelles}}>
+						
+					[<li class="zditer_#VALEUR[ (#ENV**{erreurs}|table_valeur{#VALEUR}|oui)erreur]">
+						<label for="#VALEUR">#EVAL{_T('scl:#CLE');}</label>
+						[
+						<span class='erreur'>(#ENV**{erreurs}|table_valeur{#VALEUR})</span>
 						]
-				<ul>				
+						<input type="text" class="#VALEUR" name="(#VALEUR)" id="#VALEUR" value="#ENV{#VALEUR}"/>
+					</li>]					
+					
+					</BOUCLE_donnees_perso>	
+					
+					<li class="editer_email[ (#ENV**{erreurs}|table_valeur{email}|oui)erreur]">
+						<label for="email"><:scl:email:></label>				
+						[
+						<span class='erreur'>(#ENV**{erreurs}|table_valeur{email})</span>
+						]
+						<input type="text" class="email" name="email" id="email" value="#ENV{email}"/>
 	
-				<BOUCLE_listes(POUR){tableau #GET{liste_donnes}}>	
-				<li><div class="choix">
-						<input type="checkbox" class="checkbox" name="mailinglists[]" id="mailinglists_[(#VALEUR|table_valeur{id})]" value="[(#VALEUR|table_valeur{id})]"[ (#VALEUR|table_valeur{id}|in_array{#ENV{mailinglists,#ARRAY{}}})oui) checked="checked"]/>
-						<label for="ml_act_ajout">[(#VALEUR|table_valeur{name})]</label>
-					</div>
-				</li>
-				</BOUCLE_listes>
+					</li>				
+					<li class="editer_email2[ (#ENV**{erreurs}|table_valeur{email2}|oui)erreur]">
+						<label for="email2"><:scl:email_confirmer:></label>				
+						[
+						<span class='erreur'>(#ENV**{erreurs}|table_valeur{email2})</span>
+						]
+						<input type="text" class="email2" name="email2" id="email2" value="#ENV{email2}"/>
 	
-					</ul>
+					</li>				
+					
+				</ul>
+	
 			</fieldset>	
-		</BOUCLE_teste>
-			<input type="hidden" name="mailinglists[]" value="[(#GET{liste_donnes}|table_valeur{0}|table_valeur{id})]"/>
-			<//B_teste>	
-		<p class="boutons">
-			<input type="submit" name="enregistrer" class="submit" value="<:bouton_valider:>" />
-		</p>
-	</BOUCLE_editer>		
+			<BOUCLE_teste(CONDITION){si #GET{liste_donnes}|count|>{1}}>
+				<fieldset class="donnees_perso">
+					<legend><:scl:mailinglists:></legend>
+		
+		
+					<label for="ml_act_ajout"><:scl:choix_mailinglists_abonnement:></label>
+						[
+							<span class='erreur'>(#ENV**{erreurs}|table_valeur{mailinglists})</span>
+							]
+					<ul>				
+		
+					<BOUCLE_listes(POUR){tableau #GET{liste_donnes}}>	
+					<li><div class="choix">
+							<input type="checkbox" class="checkbox" name="mailinglists[]" id="mailinglists_[(#VALEUR|table_valeur{id})]" value="[(#VALEUR|table_valeur{id})]"[ (#VALEUR|table_valeur{id}|in_array{#ENV{mailinglists,#ARRAY{}}})oui) checked="checked"]/>
+							<label for="ml_act_ajout">[(#VALEUR|table_valeur{name})]</label>
+						</div>
+					</li>
+					</BOUCLE_listes>
+		
+						</ul>
+				</fieldset>	
+			</BOUCLE_teste>
+				<input type="hidden" name="mailinglists[]" value="[(#GET{liste_donnes}|table_valeur{0}|table_valeur{id})]"/>
+				<//B_teste>	
+			<p class="boutons">
+				<input type="submit" name="enregistrer" class="submit" value="<:bouton_valider:>" />
+			</p>
+		</BOUCLE_editer>	
+
 	</div></form>
 	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
 	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+	</BOUCLE_valide>
+		#SET{url_lists,#URL_ECRIRE{squirrel_chimp,afficher=config&part=squirrel_chimp_lists}}
+		<p class="reponse_formulaire reponse_formulaire_erreur"><:scl:choisir_liste{url=#GET{url_lists}}:>	</p>
+		<//B_valide>
 </div>
+
