@@ -23,7 +23,7 @@
 					[(#REM)récupère les champs accordées avec mailchimp]
 					<BOUCLE_donnees_perso(POUR){tableau #ENV{donnees_personnelles}}>
 						
-					[<li class="zditer_#VALEUR[ (#ENV**{erreurs}|table_valeur{#VALEUR}|oui)erreur]">
+					[<li class="editer_#VALEUR[ (#ENV**{erreurs}|table_valeur{#VALEUR}|oui)erreur]">
 						<label for="#VALEUR">#EVAL{_T('scl:#CLE');}</label>
 						[
 						<span class='erreur'>(#ENV**{erreurs}|table_valeur{#VALEUR})</span>
@@ -54,7 +54,7 @@
 	
 			</fieldset>	
 			<BOUCLE_teste(CONDITION){si #GET{liste_donnes}|count|>{1}}>
-				<fieldset class="donnees_perso">
+				<fieldset class="donnees_lists">
 					<legend><:scl:mailinglists:></legend>
 		
 		
