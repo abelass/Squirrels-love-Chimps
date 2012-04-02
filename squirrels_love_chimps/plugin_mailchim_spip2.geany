@@ -1,0 +1,25 @@
+
+[indentation]
+indent_width=4
+indent_type=1
+indent_hard_tab_width=8
+detect_indent=false
+indent_mode=2
+
+[project]
+name=plugin_mailchim_spip2
+base_path=/home/abelass/www/spip2/plugins/squirrels_love_chimps/
+description=
+
+[long line marker]
+long_line_behaviour=1
+long_line_column=72
+
+[files]
+current_page=4
+FILE_NAME_0=322;HTML;0;16;1;1;1;/home/abelass/www/spip2/plugins/squirrels_love_chimps/trunk/prive/squelettes/navigation/sc_shortcuts.html;0;4
+FILE_NAME_1=0;HTML;0;16;1;1;1;/home/abelass/www/spip2/plugins/squirrels_love_chimps/trunk/prive/squelettes/navigation/squirrel_chimp_shortcuts.html;0;4
+FILE_NAME_2=0;HTML;0;16;1;1;1;/home/abelass/www/spip2/plugins/squirrels_love_chimps/trunk/prive/squelettes/navigation/squirrel_chimp_boite_info.html;0;4
+FILE_NAME_3=0;HTML;0;16;1;1;1;/home/abelass/www/spip2/plugins/squirrels_love_chimps/trunk/prive/squelettes/navigation/sc_boite_info.html;0;4
+FILE_NAME_4=1625;PHP;0;16;1;1;1;/home/abelass/www/spip2/plugins/squirrels_love_chimps/trunk/exec/squirrel_chimp.php;0;4
+FILE_NAME_5=0;HTML;0;16;1;1;1;/home/abelass/www/spip2/plugins/squirrels_love_chimps/trunk/prive/squelettes/contenu/squirrel_chimp.html;0;4

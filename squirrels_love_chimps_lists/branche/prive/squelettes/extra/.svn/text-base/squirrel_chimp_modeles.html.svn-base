@@ -1,0 +1,65 @@
+
+
+
+#SET{listes_choisies,#CONFIG{squirrel_chimp/mailinglists}}
+
+
+#SET{filters,#GET{listes_choisies}|array_filtre_lists}
+
+
+[(#GET{listes_choisies}|oui)
+#SET{listes,#CONFIG{squirrel_chimp/apiKey}|recuperer_listes{#GET{filters}}}
+
+
+	[(#GET{listes}|table_valeur{error}|?{
+		[<p class="reponse_formulaire_erreur">(#GET{listes}|table_valeur{error})</p>]
+		,
+		#SET{liste_donnes,#GET{listes}|table_valeur{data}}
+		}
+		)]
+	]
+<strong><:scl:modeles_form_abonnement:></strong>	
+	
+<B_listes>	
+<div class="mailinglistes">
+	<div>
+		<:scl:mailinglists_dispos:> #GET{lists}
+	</div>
+	<BOUCLE_listes(POUR){tableau #GET{liste_donnes}}>
+		<div>[(#VALEUR|table_valeur{name})] - id: [(#VALEUR|table_valeur{id})]</div>
+	</BOUCLE_listes>
+	<div>
+		<:scl:exemple:> &lt;abonnement_mailchimp| id=<:scl:id_separe_virgules:>&gt;
+	</div>
+</div>		
+#SET{total,#TOTAL_BOUCLE}
+</B_listes>
+
+
+<div>
+	
+ <dl>
+<BOUCLE_cond(CONDITION){si #GET{total}|>{1}}>
+	<dt><:scl:modeles:></dt>
+	<dt><em><:scl:tout:></em></dt>
+		<dd class="odd">
+			<div>&lt;abonnement_mailchimp| id=[(#GET{listes_choisies}|array_keys|implode{','})]&gt;</div>
+			<div><:scl:ou:></div>
+			<div>&lt;abonnement_mailchimp|&gt;</div>
+		</dd> 
+	<dt><em><:scl:une_liste:></em></dt>
+
+		<dd class="even">
+			<div>&lt;abonnement_mailchimp| id=[(#GET{listes_choisies}|array_keys|table_valeur{0})]&gt;</div>
+		</dd> 
+</BOUCLE_cond>
+	[(#GET{total}|>{0}|oui)
+	[<dt><:scl:modele:></dt>
+		<dd class="odd">
+			<div>&lt;abonnement_mailchimp| id=(#GET{listes_choisies}|array_keys|table_valeur{0})&gt;</div>]
+		]
+<//B_cond>
+ </dl>
+</div>
+
+

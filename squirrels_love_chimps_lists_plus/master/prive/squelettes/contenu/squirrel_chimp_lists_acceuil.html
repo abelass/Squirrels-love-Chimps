@@ -1,0 +1,50 @@
+[(#REM)Récuperation des listes de mailchimp]
+
+#SET{listes_choisies,#CONFIG{squirrel_chimp/mailinglists}}
+
+[(#GET{listes_choisies}|is_array|oui)
+	#SET{filters,#GET{listes_choisies}|array_flip|array_filtre_lists}
+	]
+
+#SET{listes,#CONFIG{squirrel_chimp/apiKey}|recuperer_listes{#GET{filters}}}
+
+
+[(#GET{listes}|table_valeur{error}|?{
+	[<p class="reponse_formulaire_erreur">(#GET{listes}|table_valeur{error})</p>]
+	,
+	#SET{liste_donnes,#GET{listes}|table_valeur{data}}
+	}
+	)]
+	
+	
+<B_listes>	
+<div class="liste-elements mailinglistes">
+	[<p class="pagination">(#PAGINATION)</p>]
+	<table class='spip liste'>
+	<caption><strong class="caption"><:scl:listes_mailchimp:></strong></caption>
+		<thead>
+			<tr class='first_row'>
+				<th class='id'><:scl:id_liste:></th>
+				<th class='nom'><:scl:nom_liste:></th>
+				<th class='inscrits'><:scl:inscrits_list:></th>
+				<th class='date_syncro'><:sclp:date_syncro:></th>				
+			</tr>
+		</thead>
+		<tbody>
+		<BOUCLE_listes(POUR){tableau #GET{liste_donnes}}{pagination}>
+			#SET{stats,#VALEUR|table_valeur{stats}}
+			<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
+				<td class="id">[(#VALEUR|table_valeur{id})]</td>
+				<td class="name">[(#VALEUR|table_valeur{name})]</td> 
+				<td class="member_count">[(#GET{stats}|table_valeur{member_count})]</td>
+				<td class="date_syncro">
+					<BOUCLE_(LISTES){id_liste_mailchimp=(#VALEUR|table_valeur{id})}>
+					[(#DATE_SYNCRO|affdate{d-m-Y G:i:s})]
+					</BOUCLE_> 	
+					</td>
+			</tr>
+		</BOUCLE_listes>
+		</tbody>
+	</table>
+</div>		
+</B_listes>

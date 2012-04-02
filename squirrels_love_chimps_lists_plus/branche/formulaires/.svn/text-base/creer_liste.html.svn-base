@@ -1,0 +1,70 @@
+<div class="formulaire_spip  formulaire_#FORM">
+	<form method="post" action="#ENV{action}"><div>
+		#ACTION_FORMULAIRE{#ENV{action}}
+	#ENV		
+<fieldset class="donnees_lists">
+	<legend><:scl:donnees_listes:></legend>
+	<ul>
+	
+		
+		<li class="squirrel_chimp_mailinglists[ (#ENV**{erreurs}|table_valeur{titre}|oui)erreur]">
+			<label for="titre"><:scl:titre:></label>	
+			<div class="choix titre">
+				[
+				<span class='erreur'>(#ENV**{erreurs}|table_valeur{titre})</span>
+				]
+						
+				<input type="text" class="texte" name="titre" id="titre" value='#ENV{titre}'/>
+
+			</div>
+		</li>
+		 [(#SET{langues,[(#CONFIG{langues_utilisees}|explode{','}|serialize)]})]
+		<BOUCLE_teste(CONDITION){si #GET{langues}|count|>{1}}>
+		<li class="squirrel_chimp_mailinglists[ (#ENV**{erreurs}|table_valeur{lang}|oui)erreur]">	
+			<label for="lang"><:scl:lang:></label>
+			<div class="choix lang">
+				[
+				<span class='erreur'>(#ENV**{erreurs}|table_valeur{lang})</span>
+				]
+				<select name="lang">
+					<BOUCLE_langues(POUR){tableau #GET{langues}}>
+					<option value='#VALEUR'[(#ENV{lang}|=={#VALEUR}|oui) selected="selected"]>[(#VALEUR|traduire_nom_langue)]</option>
+					</BOUCLE_langues>
+				</select>			
+				<input type="text" class="texte" name="lang" id="lang" value='#ENV{lang}'/>
+			</div>
+		</li>	
+		</BOUCLE_teste>
+			[<input type="hidden" name="lang"  value='(#GET{langues}|table_valeur{0})'/>]
+			[(#GET{langues}|table_valeur{0}|non)
+				<input type="hidden" name="lang"  value='#CONFIG{langue_site}'/>
+				]
+		<//B_teste>
+		<li>
+			<label for="lang"><:sclp:syncroniser_liste:></label>
+			<div class="choix liste_mailchimp">	
+
+			<B_listes>
+			<select name="liste_mailchimp">
+				<option value=""><:sclp:liste_non_syncroniser:></option>				
+			<BOUCLE_listes(POUR){tableau #ENV{listes_mailchimp}}>
+				<option value="[(#VALEUR|table_valeur{id})]" [(#ENV{liste_mailchimp}|=={[(#VALEUR|table_valeur{id})]}|oui) selected="selected"]>[(#VALEUR|table_valeur{name})]
+				</option>
+			</BOUCLE_listes>
+				<option value="creer_liste_mc"[(#ENV{liste_mailchimp}|=={creer_liste_mc}|oui) selected="selected"]><:sclp:creer_liste_mc:>
+				</option>		
+			</select>
+			</B_listes>
+			</div>
+		</li>
+	</ul>
+</fieldset>
+		 
+			
+		<p class="boutons">
+			<input type="submit" name="enregistrer" class="submit" value="<:bouton_valider:>" />
+		</p>
+	</div></form>
+	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+</div>

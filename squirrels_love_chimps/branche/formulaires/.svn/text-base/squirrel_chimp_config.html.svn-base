@@ -1,0 +1,15 @@
+#CACHE{0}
+[(#REM) Noisettes pour le formulaire configuration]
+
+<fieldset>
+	<legend><:squirrelchimp:configurer_legend:></legend>
+	<ul>
+		<li class="squirrel_chimp_apikey[ (#ENV**{erreurs}|table_valeur{apiKey}|oui)erreur]">
+			<label ><:squirrelchimp:configurer_apikey:></label>
+			[
+			<span class='erreur'>(#ENV**{erreurs}|table_valeur{#ENV{apiKey}})</span>
+			]<input type="text" class="text" name="apiKey" id="apiKey" [ value="(#ENV{apiKey})"] />
+			<p class="explication"><:squirrelchimp:configurer_apikey_explication:></p>
+		</li>
+	</ul>
+</fieldset>
