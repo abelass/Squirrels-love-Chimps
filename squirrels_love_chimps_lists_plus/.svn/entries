@@ -1,18 +1,18 @@
-10
+9
 
 dir
-60004
+66866
 svn://zone.spip.org/spip-zone/_plugins_/squirrels_love_chimps_lists_plus
 svn://zone.spip.org/spip-zone
 
 
 
-2012-03-27T15:51:29.111193Z
-59822
+2012-08-06T08:23:08.551773Z
+64460
 abelass@gmail.com
 
 
-
+svn:special svn:externals svn:needs-lock
 
 
 
@@ -26,9 +26,9 @@ abelass@gmail.com
 
 ac52e18a-acf5-0310-9fe8-c4428f23b10a
 
-trunk
+branches
 dir
 
-branches
+trunk
 dir
 

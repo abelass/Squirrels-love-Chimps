@@ -1,0 +1,15 @@
+*.class
+*.pyc
+*.pyo
+.settings*
+.svn*
+.project
+squirrels_love_chimps_lists_plus/.svn
+squirrels_love_chimps/.svn
+squirrels_love_chimps_campaigns/.svn
+squirrels_love_chimps_lists/.svn
+squirrels_love_chimps_lists_plus/.settings
+squirrels_love_chimps/.settings
+squirrels_love_chimps_campaigns/.settings
+squirrels_love_chimps_lists/.settings
+squirrels_love_chimps/branches/.svn

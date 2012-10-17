@@ -1,0 +1,24 @@
+<paquet
+	prefix="squirrel_chimp"
+	categorie="communication"
+	version="2.0.3"
+	etat="test"
+	compatibilite="[2.0.15;3.0.*]"
+	logo="prive/themes/spip/images/logo_slc_24.png"
+	documentation="http://www.spip-contrib.net/Squirrels-Love-Chimps"
+>
+	<nom>Squirrels Love Chimps</nom>
+
+	<auteur lien='http://www.mychacra.net/'>My Chacra</auteur>
+	<auteur lien='http://www.spade.be/labs/squirrels-love-chimps'>Spade</auteur>
+
+	<licence>MIT</licence>
+	
+	<traduire module="squirrelchimp" reference="fr" gestionnaire="salvatore" />	
+	
+	<pipeline nom="header_prive" inclure="squirrel_chimp_pipelines.php" /> 
+	<pipeline nom="affiche_droite" inclure="squirrel_chimp_pipelines.php" /> 
+	
+	<menu nom="squirrel_chimp" titre="squirrelchimp:titre_plugin" parent="menu_edition" icone="images/logo_slc_16.png" action="squirrel_chimp" /> 
+
+</paquet>

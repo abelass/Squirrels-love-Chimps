@@ -1,0 +1,44 @@
+<plugin>
+	<nom>Squirrels Love Chimps</nom>
+	<auteur>[Spade->http://www.spade.be/labs/squirrels-love-chimps] et [Rainer M&#252;ller->http://www.mychacra.net]</auteur>
+	<licence>MIT</licence>
+	<version>2.0.3</version>
+	<etat>test</etat>
+	<slogan>Connecter SPIP avec Mailchimp</slogan>
+	<description>
+		Ce plugin constitue le coeur d'un set de plugins qui on pour but de d'intégerer connecter SPIP  avec [MailChimp->http://mailchimp.com/]
+	
+		Il met à disposition l'api de Mailchimp ainsi qu'un framework permettant d'ajouter facilement d'autre plugins
+		
+		Existent pour le moment les plugins suivants
+		-* [Squirrels Love Chimps Lists->http://files.spip.org/spip-zone/squirrels_love_chimps_lists.zip](squirrel_chimp_lists)
+		-* [Squirrels Love Chimps Campagnes->http://files.spip.org/spip-zone/squirrels_love_chimps_campaigns.zip](squirrel_chimp_campaigns)
+	</description>
+	<lien>http://www.spip-contrib.net/Squirrels-Love-Chimps</lien>
+	<prefix>squirrel_chimp</prefix>
+	<icon>images/logo_slc.png</icon>
+	<bouton id="squirrel_chimp" parent="naviguer">
+		<icone>images/logo_slc_24.png</icone>
+		<titre>Squirrels Love Chimps</titre>   
+		<url>squirrel_chimp</url>   
+    </bouton>
+    <bouton id="squirrel_chimp21" parent="bando_edition">
+    <titre>MailChimp</titre>
+    <icone>images/logo_slc_16.png</icone>
+    <url>squirrel_chimp</url>
+    </bouton>
+ 	<pipeline>
+		<nom>header_prive</nom>		
+		<inclure>squirrel_chimp_pipelines.php</inclure>
+	</pipeline>   
+ 	<pipeline>
+		<nom>affiche_droite</nom>		
+		<inclure>squirrel_chimp_pipelines.php</inclure>
+	</pipeline> 	  
+    <options>squirrel_chimp_options.php</options>
+    <fonctions>squirrel_chimp_fonctions.php</fonctions>
+	<necessite id="SPIP" version="[2.0.15;3.0.99]" />
+	<necessite id="spip_bonux" version="[2.2.17;]" />	
+	<categorie>communication</categorie>
+	<traduire gestionnaire="salvatore" module="squirrelchimp" reference="fr" />
+</plugin>

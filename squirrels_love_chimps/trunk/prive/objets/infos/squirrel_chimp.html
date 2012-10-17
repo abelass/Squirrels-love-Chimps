@@ -1,0 +1,10 @@
+[(#REM) Intégration des noisettes type : "prive/squelettes/navigation/NOM_OBJET_DECLARE_boite_info.html" des objets déclarés (voir "inc/squirrel_chimp_definitions.php" pour la déclaration des objets)]
+
+#SET{chemin,prive/squelettes/navigation/}
+#SET{objets,(#VAL{objets}|objets_config)}
+
+<BOUCLE_objets(POUR){tableau #GET{objets}}>
+	[(#CHEMIN{[(#GET{chemin})][(#CLE)]_boite_info.html}|oui)
+		[(#INCLURE{fond=[(#GET{chemin})][(#CLE)]_boite_info}{env})]
+	]
+</BOUCLE_objets>	

@@ -1,0 +1,40 @@
+#CACHE{0}
+
+<h1><:spip:icone_configuration_site:></h1>
+#SET{chemin,formulaires/}
+
+[(#REM) Les objets déclarés (voir "inc/squirrel_chimp_definitions.php" pour la déclaration des objets)]
+#SET{objets,(#VAL{objets}|objets_config)}
+
+
+[(#REM) Menu d'onglets des objets déclarées et qui dispose d'un squelette type "formulaires/config_NOM_OBJET_DECLARE.html"]
+<B_objets>
+	<ul class="menu_mailchimp barre_onglet clearfix">
+	<BOUCLE_objets(POUR){tableau #GET{objets}}>
+		[(#REM) Etablit le prefixe du fichier du languue pour l'affichage du titre de l'onglet]
+		#SET{fichier_langue,#CLE}
+		[(#VALEUR|table_valeur{fichier_langue}|oui)
+			[(#SET{fichier_langue,#VALEUR|table_valeur{fichier_langue}})]
+			]
+			[(#CHEMIN{[(#GET{chemin})][(#CLE)]_config.html}|oui)
+			<li>
+				[(#ENV{part}|=={#CLE}|?{
+					<strong class="on">[(#VAL{#GET{fichier_langue}:config_#CLE}|_T)] </strong>
+					,
+					<a  href="[(#SELF|parametre_url{part,#CLE})]">
+					[(#VAL{#GET{fichier_langue}:config_#CLE}|_T)]
+					</a>				
+				})]
+
+			</li>
+			]
+	</BOUCLE_objets>
+	</ul>
+</B_objets>	
+
+[(#REM) le formulaire de configuration pour tous les plugins proprement déclarés (inc/squirrel_chimp_definitions.php)]
+<div class='ajax'>
+#FORMULAIRE_CONFIGURER_SQUIRREL_CHIMP{#GET{objets},#ENV{part}}
+</div>
+
+

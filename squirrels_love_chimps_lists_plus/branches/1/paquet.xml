@@ -1,0 +1,32 @@
+<paquet
+	prefix="sclp"
+	categorie="communication"
+	version="1.0.3"
+	schema="0.2.14" 	
+	etat="test"
+	compatibilite="[2.0.15;3.0.*]"
+	logo="prive/themes/spip/images/logo_slclp.png"
+	documentation="http://www.spip-contrib.net/Squirrels-Love-Chimps"
+>
+	<nom>Squirrels Love Chimps Lists Plus</nom>
+
+	<auteur lien='http://www.mychacra.net/'>My Chacra</auteur>
+	<auteur lien='http://www.spade.be/labs/squirrels-love-chimps'>Spade</auteur>
+
+	<licence>MIT</licence>
+	
+	<traduire module="squirrelchimp" reference="fr" gestionnaire="salvatore" />	
+	
+	<pipeline nom="declarer_tables_principales" inclure="base/sclp.php" /> 
+	<pipeline nom="declarer_tables_auxiliaires" inclure="base/sclp.php" /> 
+	<pipeline nom="declarer_tables_interfaces" inclure="base/sclp_tables_interfaces.php" /> 
+	<pipeline nom="squirrel_chimp_definitions" inclure="sclp_pipelines.php" /> 
+	<pipeline nom="formulaire_traiter" inclure="sclp_pipelines.php" /> 
+	<pipeline nom="affiche_milieu" inclure="sclp_pipelines.php" /> 
+	<pipeline nom="taches_generales_cron" inclure="sclp_pipelines.php" /> 
+	<pipeline nom="squirrel_chimp_lists_config_traiter" inclure="sclp_pipelines.php" /> 
+	<pipeline nom="header_prive" inclure="sclp_pipelines.php" /> 
+
+	<necessite nom="squirrel_chimp" compatibilite="[2.0.0;[" />	
+	<necessite nom="squirrel_chimp_lists" compatibilite="[2.0.0;[" />	
+</paquet>

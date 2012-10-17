@@ -1,0 +1,10 @@
+[(#REM) Intégration des noisettes type :prive/squelettes/navigation/NOM_OBJET_shortcuts.html des objets déclarés (voir "inc/squirrel_chimp_definitions.php" pour la déclaration des objets)]
+
+#SET{chemin,prive/squelettes/navigation/}
+#SET{objets,(#VAL{objets}|objets_config)}
+
+<BOUCLE_objets(POUR){tableau #GET{objets}}>
+	[(#CHEMIN{[(#GET{chemin})][(#CLE)]_shortcuts.html}|oui)
+		[(#INCLURE{fond=[(#GET{chemin})][(#CLE)]_shortcuts}{env})]
+	]
+</BOUCLE_objets>	

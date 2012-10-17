@@ -1,9 +1,0 @@
-[(#REM) Inclut dans le box raccourcis modeles de la colonne gauche]
-
-<strong><:scc:modele_liste_campagnes:></strong>
- <dl>
-	<dt><:scl:modele:></dt>
-		<dd class="odd">
-			&lt;liste_campagnes|&gt;
-		</dd> 
-</dl>

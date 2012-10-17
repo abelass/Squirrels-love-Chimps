@@ -1,5 +1,0 @@
-[(#REM)Page d'accuil de configuration ]
-
-<INCLURE{fond=prive/squelettes/contenu/inc-squirrel_chimp_config}{env}{part=#ENV{part,squirrel_chimp}}{date}/>
-
-
