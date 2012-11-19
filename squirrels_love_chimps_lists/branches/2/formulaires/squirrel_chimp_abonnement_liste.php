@@ -63,10 +63,13 @@ function formulaires_squirrel_chimp_abonnement_liste_verifier_dist($listes='')
 	$optin = lire_config('squirrel_chimp/ml_opt_in')?false:true; //yes, send optin emails
 	
 	// Composer l'array des donnes pour mailchimp
-	$donnees_auteur=array();
-	foreach($donnees_personnelles AS $value){
-		$donnees_auteur[$value]=_request($value);
-		}
+	
+	$donnees_auteur=array('email'=>_request('email'));
+    if(is_array($donnees_personnelles)){    
+    	foreach($donnees_personnelles AS $value){
+    		$donnees_auteur[$value]=_request($value);
+    		}
+        }
 		
 	if ($apiKey){
 		# API mailchimp
