@@ -231,7 +231,7 @@ function recuperer_listes($apiKey,$filters='',$start='0',$limit='100'){
 		
 		//récuperation des listes
 		
-		$retval = $api->lists($filters,$start,$limit);
+		$retval = $api->lists();
 		
 		$return=array();
 
