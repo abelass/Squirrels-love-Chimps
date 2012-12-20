@@ -96,7 +96,7 @@ function formulaires_creer_liste_traiter_dist($listes_mailchimp=''){
 
 	#Retour succes 
 	
-	$valeurs['message_ok'] = _T('squirrelchimp:retour_test_api');*/
+	$valeurs['message_ok'] = _T('squirrelchimp:retour_test_api');
 
 
 	return $valeurs;
