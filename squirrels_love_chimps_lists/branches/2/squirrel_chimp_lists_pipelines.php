@@ -41,6 +41,7 @@ function squirrel_chimp_lists_formulaire_traiter($flux)
 	if ($formulaire=="editer_auteur"){
 		spip_log('actualisation profil','squirrel_chimp');
 		$traitement=charger_fonction('editer_auteur_traiter_listes','inc');
+        spip_log($flux,'squirrel_chimp');
 		$flux=$traitement($flux);
 	}
 
