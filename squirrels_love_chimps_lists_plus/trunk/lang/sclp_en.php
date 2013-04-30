@@ -11,7 +11,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'abonnement_inscrit' => 'People in the lists',
 	'abonnes' => 'People',
 	'activer_liste' => 'Enable the list',
-	'actualisation_spip_ok_probleme_actualisation_mailchimp' => 'Actualisation spip ok, mais il y a un problème avec l\'actualisation vers Mailchimp. si vous utilisez plusieurs tables pour la syncro, cet auteur ne figure probablement pas dans toutes les tables', # NEW
+	'actualisation_spip_ok_probleme_actualisation_mailchimp' => 'Updating spip ok, but there is a problem with the update to MailChimp. if you use multiple tables for syncro, this author is probably not in all tables',
 	'aucun_abonnement' => 'No people here',
 
 	// C

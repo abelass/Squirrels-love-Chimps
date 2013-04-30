@@ -1,5 +1,7 @@
 <traduction module="sclp" gestionnaire="salvatore" url="http://trad.spip.net" source="svn://zone.spip.org/spip-zone/_plugins_/squirrels_love_chimps_lists_plus/trunk/lang/" reference="fr">
-	<langue code="en" />
+	<langue code="en" url="http://trad.spip.net/tradlang_module/sclp?lang_cible=en">
+		<traducteur nom="Benitron" lien="http://trad.spip.net/auteur/benitron" />
+	</langue>
 	<langue code="fr" />
 	<langue code="sk" url="http://trad.spip.net/tradlang_module/sclp?lang_cible=sk">
 		<traducteur nom="jaro" lien="http://trad.spip.net/auteur/jaro" />
