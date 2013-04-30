@@ -301,6 +301,8 @@ function inc_editer_auteur_traiter_listes($flux){
 		//on verifie que les parametres du plugin mailchimp sont initialisées
 		if ($apiKey){
 
+            spip_log('actualisation_auteur','sclp');
+            
 			// initialisation d'un objet mailchimp
 			$api = new MCAPI($apiKey);
 
