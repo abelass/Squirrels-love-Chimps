@@ -38,18 +38,6 @@ function sclp_squirrel_chimp_definitions($flux){
 
 	}
 
-// Actualisation des listes à partir du formulaire editer_auteur
-function sclp_lists_formulaire_traiter($flux)
-{
-
-	// on recupere d'abord le nom du formulaire .
-	$formulaire = $flux['args']['form'];
-	spip_log(__LINE__,'squirrel_chimp');
-
-
-	return $flux ;
-}
-
 // Ajouter un traitement au formulaire de configuration , partie listes
 function sclp_squirrel_chimp_lists_config_traiter($flux){
 	
