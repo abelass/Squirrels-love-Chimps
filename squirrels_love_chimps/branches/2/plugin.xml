@@ -1,6 +1,6 @@
 <plugin>
 	<nom>Squirrels Love Chimps</nom>
-	<auteur>[Spade->http://www.spade.be/labs/squirrels-love-chimps] et [Rainer M&#252;ller->http://www.mychacra.net]</auteur>
+	<auteur>[Spade->http://www.spade.be/labs/squirrels-love-chimps] et [Web Simple->http://websimple.be]</auteur>
 	<licence>MIT</licence>
 	<version>2.0.4</version>
 	<etat>test</etat>

@@ -35,7 +35,7 @@ function squirrel_chimp_affiche_droite($flux){
 			if(find_in_path($chemin.$objet.'_modeles.html'))$contenu .=recuperer_fond($chemin.$objet.'_modeles',$flux);
 			}
 		// Insert le cotenu
-		if ($contenu) $flux['data'] .= cadre_depliable(find_in_path('images/logo_slc_24.png'),_T('squirrelchimp/spip:titre_cadre_raccourcis'),false,$contenu,$ids=’’,'r squirrel_chimp');
+		if ($contenu) $flux['data'] .= cadre_depliable(find_in_path('images/logo_slc_24.png'),_T('squirrelchimp/spip:titre_cadre_raccourcis'),false,$contenu,$ids='','r squirrel_chimp');
 	
 	}
 		
