@@ -1,0 +1,7 @@
+li.squirrel_chimp_mailinglists div.choix{ margin-bottom:10px;padding:5px;background-color: rgba(0,0,0,0.1);}
+ul.liste{margin-left: 0;padding-left: 0;}
+ul.liste li.choix{border-bottom: 1px solid rgba(0,0,0,0.2);padding-bottom: 5px;margin-bottom: 10px;list-style: none;}
+ul.liste li.choix .data,
+ul.liste li.choix .actions{font-size:0.8em;}
+.choix .accordance{padding-left: 10px;border-left:1px solid #FFF;}
+.choix .titre{font-weight: bold;font-size:1em;}

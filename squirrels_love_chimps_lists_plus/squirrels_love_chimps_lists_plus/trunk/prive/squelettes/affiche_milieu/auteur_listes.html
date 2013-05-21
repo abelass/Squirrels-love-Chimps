@@ -1,0 +1,23 @@
+
+
+<BOUCLE_test(CONDITION){si #ENV{editer_abonnements}|=={oui}|non}>
+	<B_listes>
+	<h2><:sclp:abonnement_inscrit:></h2>	
+	<ul>
+		<BOUCLE_listes(AUTEURS_LISTES listes){spip_listes.statut IN public,prive}{spip_auteurs_listes.statut=valide}{spip_auteurs_listes.id_auteur}{par titre}>
+		    <li class="squirrel_chimp_mailinglists">#TITRE</li>
+	    </BOUCLE_listes>	
+	</ul>
+	</B_listes>	
+	<div><:sclp:aucun_abonnement:></div>
+	<//B_listes>
+	<div><a class="ajax" href="[(#SELF|parametre_url{editer_abonnements,oui})]"><:sclp:modifier_abonnments:></a></div>
+</BOUCLE_test>	
+	<div><a  href="[(#SELF|parametre_url{editer_abonnements,'non'})]"><:sclp:fermer:></a></div>
+	<div class="ajax">
+	#FORMULAIRE_AUTEUR_LISTES{#ID_AUTEUR}
+	</div>
+<//B_test>		
+
+
+

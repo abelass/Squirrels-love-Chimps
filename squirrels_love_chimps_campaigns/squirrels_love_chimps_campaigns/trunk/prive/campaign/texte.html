@@ -1,0 +1,9 @@
+[(#REM) Body de mail pour la création automatique d'une campagne]
+
+<div style="width:600px;margin:auto;border:solid 1px  #CCCCCC;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:10px">
+	<BOUCLE_art(ARTICLES){id_article}{statut?}>
+	[<div style="float:left; margin:0 5px 5px 0">(#LOGO_ARTICLE|image_reduire{100})</div>]	
+	#INTRODUCTION
+	<p><a href="[(#URL_ARTICLE|url_absolue)]"><:scc:article_entier:></a></p>
+	</BOUCLE_art>
+</div>

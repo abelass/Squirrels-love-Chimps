@@ -1,0 +1,26 @@
+<B_listes_spip_desactive>
+	<h2><:sclp:poubelle:></h2>		
+	<ul class="liste poubelle">			
+	<BOUCLE_listes_spip_desactive(LISTES){statut=poubelle}>
+	<li class="choix">	
+		<span class="titre">#TITRE</span>
+		<span class="action reactiver">
+			<a class="ajax" title="<:sclp:activer_liste:>"href="#URL_ACTION_AUTEUR{gestion_listes,prive-#ID_LISTE,#SELF}">[(#CHEMIN{images/tick_64.png}|image_reduire{16}|inserer_attribut{align,absmiddle})]
+			</a>
+		</span>	
+		<span class="action eliminer">
+			<a class="ajax eliminer_objet" title="<:sclp:eliminer_liste:>"href="#URL_ACTION_AUTEUR{gestion_listes,eliminer-#ID_LISTE,#SELF}">[(#CHEMIN{images/delete_64.png}|image_reduire{16}|inserer_attribut{align,absmiddle})]
+			</a>
+		</span>	
+	</li>
+	</BOUCLE_listes_spip_desactive>
+</ul>
+</B_listes_spip_desactive>	
+
+<script type="text/javascript">
+$("a.eliminer_objet").click(
+    function(){
+        return confirm("<:sclp:confirmer_delete:>");
+    }
+);
+</script>	

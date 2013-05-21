@@ -1,0 +1,32 @@
+<plugin>
+	<nom>Squirrels Love Chimps Campaigns</nom>
+	<auteur>[Spade->http://www.spade.be/labs/squirrels-love-chimps] et [Rainer M&#252;ller->http://websimple.be]</auteur>
+	<licence>MIT</licence>
+	<version>2.0.1</version>
+	<etat>test</etat>
+	<slogan>Gestion des campagnes de Mailchimp</slogan>
+	<description>Gestion des campagnes de [Mailchimp->http://mailchimp.com/] inspir&#233;e  des fonctionnalit&#233;s du plugin Wordpress [Autochimp->http://wordpress.org/extend/plugins/autochimp/]</description>
+	<prefix>squirrel_chimp_campaigns</prefix>
+	<icon>images/logo_slc_campaigns.png</icon>
+	<necessite id="SPIP" version="[2.0.14;3.0.99]" />
+	<necessite id="squirrel_chimp" version="[2.0.0;]" />
+	<necessite id="squirrel_chimp_lists" version="[2.0.0;]" />
+	<necessite id="spip_bonux" version="[2.2.17;]" />
+	<necessite id="saisies" version='[1.9.9;]'/>	
+	<pipeline>
+		<nom>squirrel_chimp_definitions</nom>		
+		<inclure>squirrel_chimp_campaigns_pipelines.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>formulaire_traiter</nom>		
+		<inclure>squirrel_chimp_campaigns_pipelines.php</inclure>
+	</pipeline>
+	<pipeline>
+		<nom>pre_edition</nom>		
+		<inclure>squirrel_chimp_campaigns_pipelines.php</inclure>
+	</pipeline>
+	
+	<fonctions>squirrel_chimp_campaigns_fonctions.php</fonctions>
+	<categorie>communication</categorie>
+	<traduire gestionnaire="salvatore" module="scc" reference="fr" />
+</plugin>

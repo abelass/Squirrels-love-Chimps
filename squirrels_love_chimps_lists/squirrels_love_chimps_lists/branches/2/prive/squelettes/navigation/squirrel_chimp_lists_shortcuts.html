@@ -1,0 +1,10 @@
+[(#REM) désactiver pour le; moment crée le liens pour la page details de listes (prive/contenu/squirrel_chimp_lists.html)
+[(#ENV{afficher}|!={lists}|oui)
+	<div>
+		<a href="[(#URL_ECRIRE{squirrel_chimp}|parametre_url{afficher,'lists'})]" class="cellule-h">
+			[(#CHEMIN{images/logo_slc_lists.png}|image_reduire{22}|inserer_attribut{align,absmiddle})]&nbsp;<:scl:gestion_listes:>
+		</a>
+	</div>	
+	]
+	]
+
