@@ -19,18 +19,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
 	'champ_spip' => 'SPIP Feld',
-	'champs_extras' => 'Déclarez les champs à utiliser', # NEW
-	'champs_extras_explication' => 'indiquez pour chaque table les champs à utliser', # NEW
 	'champs_supp' => 'Welche zusätzlichen SPIP Informationen wollen sie bei der Synchronisierung mit MailChimp verwenden? (die Emailadresse wird immer synchronisiert)',
 	'champs_supp_mapping' => 'Verwenden Sie die folgende Tafel, um die Spip Felder mit den entsprechenden MailChimp Feldern abzustimmen',
-	'champs_utilises' => 'Champs utilisés', # NEW
 	'choisir_liste' => 'Sie müssen zuerst<a href="@url@">mindest eine Liste auswählen</a>',
 	'choix_mailinglists' => 'Welche Mailinglisten wollen Sie automatisch aktualisieren',
 	'choix_mailinglists_abonnement' => 'Wählen Sie die Liste(n) aus',
 	'config_squirrel_chimp_lists' => 'Listen',
 
 	// D
-	'declarer_champs_extras' => 'Déclarer des champs SPIP supplémentaires', # NEW
 	'demande_desincription_ok' => 'Ihre Adresse "@email@" wurde von MailChimp entfernt. Auf wiedersehen!',
 	'demande_inscription_envoyee1' => 'Eine Mail wurde an "@email@" versandt.',
 	'demande_inscription_envoyee2' => 'Um ihr Abonnement zu bestätigen klicken Sie bitte auf den Link in der soeben erhaltenen Mail.',
@@ -84,8 +80,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'sync_ok' => 'Synchronisierung war erfolgreich :',
 
 	// T
-	'tables_extras' => 'Declarer les tables à utiliser', # NEW
-	'tables_extras_explication' => 'Indiquez le(s)table(s) séparée(s) par virgule, chaque table declarée doit obligatoirement contenir un champ "id_auteur"', # NEW
 	'tout' => 'Alle Listen',
 
 	// U

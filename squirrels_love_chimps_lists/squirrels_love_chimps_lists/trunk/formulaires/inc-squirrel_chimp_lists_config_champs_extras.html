@@ -20,12 +20,12 @@
 			<p class="explication"><:scl:champs_extras_explication:></p>
 			<div class="choix">
 			<dl>
-			<BOUCLE_tables(POUR){tableau #GET{tables}}>
+			<BOUCLE_tables(DATA){source table, #GET{tables}}>
 				#SET{table,#VALEUR}
 				<B_champs>
 				<dt id="#VALEUR"><a href="##VALEUR" id="table_#VALEUR"class="champs">#VALEUR</a>[ (<:scl:champs_utilises:>: (#ENV{champs}|table_valeur{#GET{table}}|implode{','}))]</dt>
 				<div class="champs_details table_#VALEUR" >
-				<BOUCLE_champs(POUR){tableau #ENV{c}|table_valeur{spip}|table_valeur{tout}|table_valeur{#GET{table}}}>
+				<BOUCLE_champs(DATA){source table, #ENV{c}|table_valeur{spip}|table_valeur{tout}|table_valeur{#GET{table}}}{valeur!=email}>
 					<dd><input type="checkbox" class="checkbox" name="champs[#GET{table}][#VALEUR]" id="champs_#VALEUR" value='#VALEUR' [(#ENV{champs}|table_valeur{#GET{table}}|table_valeur{#VALEUR}|=={#VALEUR}) checked="ckecked"] />
 				<label for="champs_#VALEUR">#VALEUR</label></dd>
 				</BOUCLE_champs>

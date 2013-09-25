@@ -21,7 +21,7 @@ include_spip('inc/config');
 	$filters=$listes?$listes:lire_config('squirrel_chimp/mailinglists');
 
 	$filters=array_filtre_lists($filters);
-	
+    
 	// Eviter des erreurs sur le formulaire si le plugin n'est pas configuré
 
 	$valeurs = array(
@@ -45,6 +45,8 @@ include_spip('inc/config');
  
 function formulaires_squirrel_chimp_abonnement_liste_verifier_dist($listes='')
 {
+    include_spip('inc/config');
+    $config=lire_config('squirrel_chimp/',array());
 	$valeurs = array();
 	$email=_request('email');
 	$email2=_request('email2');
@@ -58,9 +60,9 @@ function formulaires_squirrel_chimp_abonnement_liste_verifier_dist($listes='')
 			
 
 	// Les configurations
-	$donnees_personnelles=lire_config('squirrel_chimp/mapping');
-	$apiKey = lire_config("squirrel_chimp/apiKey");
-	$optin = lire_config('squirrel_chimp/ml_opt_in')?false:true; //yes, send optin emails
+	$donnees_personnelles=$config['mapping'];
+	$apiKey = $config['apiKey'];
+	$optin = $config['ml_opt_in']?false:true; //yes, send optin emails
 	
 	// Composer l'array des donnes pour mailchimp
 	
@@ -77,10 +79,8 @@ function formulaires_squirrel_chimp_abonnement_liste_verifier_dist($listes='')
 		
 		// Les Fonctions
 		include_spip('squirrel_chimp_lists_fonctions');
-		
-		
-		spip_log(__LINE__,'squirrel_chimp');
-		spip_log($apiKey,'squirrel_chimp');
+        
+		spip_log($apiKey,'squirrel_chimp_lists');
 
 		// initialisation d'un objet mailchimp
 		$api = new MCAPI($apiKey);
@@ -89,16 +89,15 @@ function formulaires_squirrel_chimp_abonnement_liste_verifier_dist($listes='')
 		$valeurs['message_erreur'] = _T('spip:avis_erreur');
 	    }	
 
-		
-
 		// Inscription dans mailchimp
 		if ($email AND $listes){
-			spip_log(__LINE__,'squirrel_chimp');
+			spip_log(__LINE__,'squirrel_chimp_lists');
 			// By default this sends a confirmation email - you will not see new members
 			// until the link contained in it is clicked!
 			// listSubscribe(string apikey, string id, string email_address, array merge_vars, string email_type, bool double_optin, bool update_existing, bool replace_interests, bool send_welcome)
 			
 			foreach($listes AS $listId){
+			    spip_log('id:'.$listId,'squirrel_chimplists');
 				$valeurs=inscription_liste_mc($valeurs,$api,$listId,$email,$donnees_auteur,$email_type,$optin,true);
 				$valeurs=$valeurs['data'];
 			}

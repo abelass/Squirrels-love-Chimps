@@ -28,7 +28,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'explication_article_campagne' => 'A campaign will be created for each chosen list',
 	'explication_campagne_creation_unique' => 'If desable, a new campaign will be created each time the article is updated',
 	'explication_envoyer_campagne_directe' => 'If desable, the camapign will be saved as draft',
-	'explication_rubrique_campagne' => 'Articles in the following sections will be used to automatically create campaigns (if you don\'t choose anything article in all sections will be used)',
+	'explication_rubrique_campagne' => 'Articles in the following sections will be used to automatically create campaigns (if you don’t choose anything article in all sections will be used)',
 
 	// G
 	'gestion_campagnes' => 'Campaigns management',

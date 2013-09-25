@@ -1,10 +1,12 @@
 <traduction module="scl" gestionnaire="salvatore" url="http://trad.spip.net" source="svn://zone.spip.org/spip-zone/_plugins_/squirrels_love_chimps_lists/trunk/lang/" reference="fr">
-	<langue code="de" />
-	<langue code="en" url="http://trad.spip.net/tradlang_module/scl?lang_cible=en">
+	<langue code="de" url="http://trad.spip.net/tradlang_module/scl?lang_cible=de" total="54" traduits="48" relire="0" modifs="0" nouveaux="6" pourcent="88.89">
+	</langue>
+	<langue code="en" url="http://trad.spip.net/tradlang_module/scl?lang_cible=en" total="54" traduits="54" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Benitron" lien="http://trad.spip.net/auteur/benitron" />
 	</langue>
-	<langue code="fr" />
-	<langue code="sk" url="http://trad.spip.net/tradlang_module/scl?lang_cible=sk">
+	<langue code="fr" url="http://trad.spip.net/tradlang_module/scl?lang_cible=fr" total="54" traduits="54" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+	</langue>
+	<langue code="sk" url="http://trad.spip.net/tradlang_module/scl?lang_cible=sk" total="54" traduits="54" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="jaro" lien="http://trad.spip.net/auteur/jaro" />
 	</langue>
 </traduction>

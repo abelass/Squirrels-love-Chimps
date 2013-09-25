@@ -15,7 +15,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'actualiser_mailinglists_enlever' => 'When an author is deleted (deleted too in the mailing list)',
 
 	// B
-	'bypass_ml_opt_in' => 'Bypass MailChimp opt-in. New authors don\'t recieve confirmation email from MailChimp (MailChimp <a target="_blank" href="http://www.mailchimp.com/kb/article/how-does-confirmed-optin-or-double-optin-work">recommand to not to abuse of this</a>, be carefull!)',
+	'bypass_ml_opt_in' => 'Bypass MailChimp opt-in. New authors don’t recieve confirmation email from MailChimp (MailChimp <a target="_blank" href="http://www.mailchimp.com/kb/article/how-does-confirmed-optin-or-double-optin-work">recommand to not to abuse of this</a>, be carefull!)',
 
 	// C
 	'champ_spip' => 'SPIP field',
@@ -34,7 +34,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'demande_desincription_ok' => 'your address "@email@" has been deleted from Mailchimp. Bye.',
 	'demande_inscription_envoyee1' => 'A message has been sent to your address "@email@".',
 	'demande_inscription_envoyee2' => 'Click on the link into the message you recieved to validate your subscription.',
-	'demande_inscription_envoyee3' => 'Eventually check your SPAM folder or your trashbin if you don\'t get thie email.',
+	'demande_inscription_envoyee3' => 'Eventually check your SPAM folder or your trashbin if you don’t get thie email.',
 	'demande_inscription_envoyee_ok' => 'Your subscription has been saved.',
 	'donnees_personnelles' => 'Your personal data',
 

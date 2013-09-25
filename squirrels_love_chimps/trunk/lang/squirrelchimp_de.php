@@ -17,8 +17,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'configurer_apikey_explication' => 'API Key den man im Verwaltungspanel : <a href="http://admin.mailchimp.com/account/api">MailChimp API</a> findet',
 	'configurer_erreur_api' => 'Irrtum, Ihre Daten wurden nicht gespeichert',
 	'configurer_legend' => 'MailChimp Identifizierungs Parameter',
-	'configurer_listid' => 'Identifiant unique de la liste', # NEW
-	'configurer_listid_explication' => 'Chaque liste de personnes possède un identifiant unique. Visualisez la liste qui vous intéresse sur cette page : <a href ="https://admin.mailchimp.com/lists/">Mailchimp list</a>. Cliquez sur "Settings/list Settings and unique id" puis en bas de la page vous trouverez l\'identifiant: "unique id for list"', # NEW
 
 	// R
 	'retour_accueil' => 'Zurück zur Hauptseite',

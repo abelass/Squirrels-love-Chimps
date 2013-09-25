@@ -75,15 +75,15 @@
 			[(#CONFIG{squirrel_chimp/mailinglists}|oui)#SET{champs,#GET{apikey}|champs_listes{#CONFIG{squirrel_chimp/mailinglists}|array_keys}]
 			#SET{champs_mailchimp,#GET{champs}|table_valeur{mailchimp}}
 
-			<BOUCLE_champs_actifs(POUR){tableau #ENV{champs}}>
+			<BOUCLE_champs_actifs(DATA){source table, #ENV{champs}}>
 			
-			<BOUCLE_listes2(POUR){tableau #VALEUR}>
+			<BOUCLE_listes2(DATA){source table, #VALEUR}>
 				<div class="choix">
 					<b>[(#VALEUR)] (<:scl:champ_spip:>)</b>  #SET{name,#VALEUR}
 				<B_champs_mc>
 					<select name="mapping[#GET{name}]">
 					<option value=""><:scl:pas_accorder:></option>	
-					<BOUCLE_champs_mc(POUR){tableau #GET{champs_mailchimp}}>
+					<BOUCLE_champs_mc(DATA){source table, #GET{champs_mailchimp}}{cle!=email}>
 					<option value="[(#VALEUR|table_valeur{tag})]"[(#ENV{mapping}|table_valeur{#GET{name}}|=={[(#VALEUR|table_valeur{tag})]}|oui) selected="selected"]>[(#VALEUR|table_valeur{name})]</option>
 					</BOUCLE_champs_mc>
 					</select>
