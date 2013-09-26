@@ -11,7 +11,7 @@ function array_filtre_lists($mailinglists){
 		if(count($mailinglists)>1)$lists=$mailinglists;
         else {$lists=implode(',',$mailinglists); echo 1;}
 	}
-	else $lists=$mailinglists;
+	else $lists=explode(',',$mailinglists);
 	return array('list_id'=>$lists);
 	}
 
