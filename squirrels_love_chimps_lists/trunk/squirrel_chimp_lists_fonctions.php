@@ -8,9 +8,10 @@ if (!defined("_ECRIRE_INC_VERSION")) return;
 function array_filtre_lists($mailinglists){
 
 	if(is_array($mailinglists)){
-		if(count($mailinglists)>0)$lists=implode(array_keys($mailinglists),',');
+		if(count($mailinglists)>1)$lists=$mailinglists;
+        else {$lists=implode(',',$mailinglists); echo 1;}
 	}
-	else $lists=$mailinglists;
+	else $lists=explode(',',$mailinglists);
 	return array('list_id'=>$lists);
 	}
 
@@ -169,10 +170,10 @@ function donnees_sync($id_liste_spip='',$table='',$identifiant='',$where_add='')
 		if($data)$where_1[]=$data;
 		}
 	
-	$where=implode(' AND ',$where_1);
+	if (is_array($where_1))$where=implode(' AND ',$where_1);
 	
 	
-	$champs=implode(',',$champs);
+	$champs=$champs?implode(',',$champs):'*';
 
 
 	// La concordance entre les champs
@@ -207,7 +208,7 @@ function champs_pour_concordance($id_liste=''){
 	if(!$concordances)$concordances=array();
 
 	$concordances_fixes=array('email'=>'EMAIL');
-	$champs_sync=array_merge($concordances_fixes,$concordances);
+	$champs_sync=array_merge($concordances,$concordances_fixes);
 
 	return $champs_sync;
 }
@@ -231,7 +232,7 @@ function recuperer_listes($apiKey,$filters='',$start='0',$limit='100'){
 		
 		//récuperation des listes
 		
-		$retval = $api->lists();
+		$retval = $api->lists($filters);
 		
 		$return=array();
 

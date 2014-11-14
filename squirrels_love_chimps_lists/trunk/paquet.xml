@@ -1,15 +1,15 @@
 <paquet
 	prefix="squirrel_chimp_lists"
 	categorie="communication"
-	version="2.0.3"
+	version="2.0.6"
 	etat="test"
-	compatibilite="[2.0.15;3.0.*]"
+	compatibilite="[2.0.14;3.0.*]"
 	logo="prive/themes/spip/images/logo_slc_lists.png"
-	documentation="http://www.spip-contrib.net/Squirrels-Love-Chimps"
+	documentation="http://contrib.spip.net/Squirrels-Love-Chimps"
 >
 	<nom>Squirrels Love Chimps Lists</nom>
 
-	<auteur lien='http://www.mychacra.net/'>My Chacra</auteur>
+	<auteur lien='http://websimple.be'>Web Simple</auteur>
 	<auteur lien='http://www.spade.be/labs/squirrels-love-chimps'>Spade</auteur>
 
 	<licence>MIT</licence>
