@@ -3,13 +3,13 @@
 	categorie="communication"
 	version="2.0.1"
 	etat="test"
-	compatibilite="[2.0.15;3.0.*]"
+	compatibilite="[2.0.14;3.0.*]"
 	logo="prive/themes/spip/images/logo_slc_campaigns.png"
-	documentation="http://www.spip-contrib.net/Squirrels-Love-Chimps"
+	documentation="http://contrib.spip.net/Squirrels-Love-Chimps"
 >
 	<nom>Squirrels Love Chimps Campaigns</nom>
 
-	<auteur lien='http://www.mychacra.net/'>My Chacra</auteur>
+	<auteur lien='http://websimple.be'>Web Simple</auteur>
 	<auteur lien='http://www.spade.be/labs/squirrels-love-chimps'>Spade</auteur>
 
 	<licence>MIT</licence>

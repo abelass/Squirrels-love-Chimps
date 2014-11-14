@@ -6,17 +6,17 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'abonnement_inscrit' => 'Inscrits aux listes d\'envois',
+	'abonnement_inscrit' => 'Inscrits aux listes d’envois',
 	'abonnes' => 'Abonnés',
 	'activer_liste' => 'Activer cette liste',
-	'actualisation_spip_ok_probleme_actualisation_mailchimp' => 'Actualisation spip ok, mais il y a un problème avec l\'actualisation vers Mailchimp. si vous utilisez plusieurs tables pour la syncro, cet auteur ne figure probablement pas dans toutes les tables',
-	'aucun_abonnement' => 'Pas d\'abonnments',
+	'actualisation_spip_ok_probleme_actualisation_mailchimp' => 'Actualisation spip ok, mais il y a un problème avec l’actualisation vers Mailchimp. si vous utilisez plusieurs tables pour la syncro, cet auteur ne figure probablement pas dans toutes les tables',
+	'aucun_abonnement' => 'Pas d’abonnments',
 
 	// C
 	'choix_mailinglists' => 'Sélectionner les listes créées sur SPIP à synchroniser avec les listes MailChimp',
-	'confirmer_delete' => 'Vous êtes en train d\'éliminer définitivement cette liste, voulez-vous vraiment continuer ?',
+	'confirmer_delete' => 'Vous êtes en train d’éliminer définitivement cette liste, voulez-vous vraiment continuer ?',
 	'creer_liste' => 'Créer la liste',
-	'creer_liste_depuis_mc' => 'Créer une liste à partir d\'une liste MailChimp',
+	'creer_liste_depuis_mc' => 'Créer une liste à partir d’une liste MailChimp',
 	'creer_listes' => 'Créer une liste',
 	'creer_nouvelle_liste' => 'Créer une nouvelle liste Spip',
 
@@ -34,7 +34,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'fermer' => 'Fermer',
 
 	// G
-	'gerer_abonnements_listes' => 'Gérer les listes d\'envois',
+	'gerer_abonnements_listes' => 'Gérer les listes d’envois',
 	'gestion_listes' => 'Gestion des listes',
 
 	// L

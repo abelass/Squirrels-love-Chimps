@@ -70,7 +70,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'syncroniser_maintenant' => 'Synchronizovať teraz',
 
 	// T
-	'titre' => 'Nadpis'
+	'titre' => 'Titulok'
 );
 
 ?>
