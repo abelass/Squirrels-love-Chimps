@@ -5,7 +5,7 @@
 	etat="test"
 	compatibilite="[2.0.15;3.0.*]"
 	logo="prive/themes/spip/images/logo_slc_24.png"
-	documentation="http://www.spip-contrib.net/Squirrels-Love-Chimps"
+	documentation="http://contrib.spip.net/Squirrels-Love-Chimps"
 >
 	<nom>Squirrels Love Chimps</nom>
 

@@ -14,7 +14,7 @@
 		-* [Squirrels Love Chimps Lists->http://files.spip.org/spip-zone/squirrels_love_chimps_lists.zip](squirrel_chimp_lists)
 		-* [Squirrels Love Chimps Campagnes->http://files.spip.org/spip-zone/squirrels_love_chimps_campaigns.zip](squirrel_chimp_campaigns)
 	</description>
-	<lien>http://www.spip-contrib.net/Squirrels-Love-Chimps</lien>
+	<lien>http://contrib.spip.net/Squirrels-Love-Chimps</lien>
 	<prefix>squirrel_chimp</prefix>
 	<icon>images/logo_slc.png</icon>
 	<bouton id="squirrel_chimp" parent="naviguer">
